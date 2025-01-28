@@ -11,6 +11,16 @@
 		7F5A3B032D486E2300259459 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5A3B022D486E2300259459 /* ContentView.swift */; };
 		7F5A3B052D486E2700259459 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F5A3B042D486E2700259459 /* Assets.xcassets */; };
 		7F5A3B082D486E2700259459 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F5A3B072D486E2700259459 /* Preview Assets.xcassets */; };
+		7F5A3B102D4876B900259459 /* SuicaListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5A3B0F2D4876B900259459 /* SuicaListView.swift */; };
+		7F5A3B122D48793B00259459 /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5A3B112D48793B00259459 /* CardsView.swift */; };
+		7F5A3B152D487AB100259459 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5A3B142D487AB100259459 /* Card.swift */; };
+		7F5A3B1B2D487C0000259459 /* CreateNewCardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5A3B1A2D487C0000259459 /* CreateNewCardListView.swift */; };
+		7F5A3B212D48837D00259459 /* CreateNewCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5A3B202D48837D00259459 /* CreateNewCardViewModel.swift */; };
+		7F5A3B232D488EC300259459 /* ViewsText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5A3B222D488EC300259459 /* ViewsText.swift */; };
+		7F5A3B252D4896C700259459 /* MyCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5A3B242D4896C700259459 /* MyCardViewModel.swift */; };
+		7F5A3B272D48977700259459 /* ChargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5A3B262D48977700259459 /* ChargeView.swift */; };
+		7F5A3B2B2D48AC5800259459 /* ChargeAmount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5A3B2A2D48AC5800259459 /* ChargeAmount.swift */; };
+		7F5A3B2D2D48AD0200259459 /* ChargeAmountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5A3B2C2D48AD0200259459 /* ChargeAmountViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +29,16 @@
 		7F5A3B022D486E2300259459 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7F5A3B042D486E2700259459 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F5A3B072D486E2700259459 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7F5A3B0F2D4876B900259459 /* SuicaListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuicaListView.swift; sourceTree = "<group>"; };
+		7F5A3B112D48793B00259459 /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
+		7F5A3B142D487AB100259459 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		7F5A3B1A2D487C0000259459 /* CreateNewCardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewCardListView.swift; sourceTree = "<group>"; };
+		7F5A3B202D48837D00259459 /* CreateNewCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewCardViewModel.swift; sourceTree = "<group>"; };
+		7F5A3B222D488EC300259459 /* ViewsText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsText.swift; sourceTree = "<group>"; };
+		7F5A3B242D4896C700259459 /* MyCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCardViewModel.swift; sourceTree = "<group>"; };
+		7F5A3B262D48977700259459 /* ChargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeView.swift; sourceTree = "<group>"; };
+		7F5A3B2A2D48AC5800259459 /* ChargeAmount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeAmount.swift; sourceTree = "<group>"; };
+		7F5A3B2C2D48AD0200259459 /* ChargeAmountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeAmountViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +71,9 @@
 		7F5A3AFF2D486E2300259459 /* SuicaTest */ = {
 			isa = PBXGroup;
 			children = (
+				7F5A3B172D487BA500259459 /* ViewModels */,
+				7F5A3B132D487AA000259459 /* Models */,
+				7F5A3B0E2D48766F00259459 /* Views */,
 				7F5A3B002D486E2300259459 /* SuicaTestApp.swift */,
 				7F5A3B022D486E2300259459 /* ContentView.swift */,
 				7F5A3B042D486E2700259459 /* Assets.xcassets */,
@@ -65,6 +88,53 @@
 				7F5A3B072D486E2700259459 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7F5A3B0E2D48766F00259459 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7F5A3B0F2D4876B900259459 /* SuicaListView.swift */,
+				7F5A3B112D48793B00259459 /* CardsView.swift */,
+				7F5A3B222D488EC300259459 /* ViewsText.swift */,
+				7F5A3B282D48A55700259459 /* CreateCardViews */,
+				7F5A3B292D48A5A000259459 /* ChargeViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7F5A3B132D487AA000259459 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7F5A3B142D487AB100259459 /* Card.swift */,
+				7F5A3B2A2D48AC5800259459 /* ChargeAmount.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7F5A3B172D487BA500259459 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7F5A3B202D48837D00259459 /* CreateNewCardViewModel.swift */,
+				7F5A3B242D4896C700259459 /* MyCardViewModel.swift */,
+				7F5A3B2C2D48AD0200259459 /* ChargeAmountViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7F5A3B282D48A55700259459 /* CreateCardViews */ = {
+			isa = PBXGroup;
+			children = (
+				7F5A3B1A2D487C0000259459 /* CreateNewCardListView.swift */,
+			);
+			path = CreateCardViews;
+			sourceTree = "<group>";
+		};
+		7F5A3B292D48A5A000259459 /* ChargeViews */ = {
+			isa = PBXGroup;
+			children = (
+				7F5A3B262D48977700259459 /* ChargeView.swift */,
+			);
+			path = ChargeViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +207,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F5A3B272D48977700259459 /* ChargeView.swift in Sources */,
 				7F5A3B032D486E2300259459 /* ContentView.swift in Sources */,
 				7F5A3B012D486E2300259459 /* SuicaTestApp.swift in Sources */,
+				7F5A3B1B2D487C0000259459 /* CreateNewCardListView.swift in Sources */,
+				7F5A3B2D2D48AD0200259459 /* ChargeAmountViewModel.swift in Sources */,
+				7F5A3B252D4896C700259459 /* MyCardViewModel.swift in Sources */,
+				7F5A3B212D48837D00259459 /* CreateNewCardViewModel.swift in Sources */,
+				7F5A3B2B2D48AC5800259459 /* ChargeAmount.swift in Sources */,
+				7F5A3B152D487AB100259459 /* Card.swift in Sources */,
+				7F5A3B232D488EC300259459 /* ViewsText.swift in Sources */,
+				7F5A3B122D48793B00259459 /* CardsView.swift in Sources */,
+				7F5A3B102D4876B900259459 /* SuicaListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
