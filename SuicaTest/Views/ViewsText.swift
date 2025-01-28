@@ -21,6 +21,6 @@ struct ChargeViewText {
     static let txtAfterCharging: String = "チャージ後の残高"
     
     static let showBalance:[String] = [
-        txtCurrentBalance, "→", txtAfterCharging
+        txtCurrentBalance, txtAfterCharging
     ]
 }

@@ -9,5 +9,5 @@ import Foundation
 
 struct ChargeAmount:Identifiable {
     let id = UUID()
-    var amount: String
+    var price: String
 }

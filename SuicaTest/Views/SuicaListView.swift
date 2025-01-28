@@ -17,20 +17,42 @@ struct SuicaListView: View {
                 Button(action: {
                     
                 }) {
-                    Image(systemName: "person.circle.fill")
+                    Image(systemName: "person.circle")
+                        .font(.system(size: 30))
                 }
-                Text("Suica一覧")
+                Spacer()
                 //Add Cards
                 Button(action: {
                     newCardViewModel.showCreate()
                 }) {
                     Image(systemName: "plus.circle")
+                        .font(.system(size: 30))
                 }
-            }.frame(maxWidth: .infinity)
-            
-            //Show Cards
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.horizontal)
+            .overlay(
+                Text("Suica一覧"),
+                alignment: .center
+            )
+            //Show My Cards
             CardsView()
             
+            //Cardによって残高を表示
+            HStack {
+                VStack(alignment: .leading) {
+                    Text(ChargeViewText.txtAfterCharging)
+                        .foregroundColor(.gray)
+                        .font(.caption)
+                    Text("¥\(myCardViewModel.card.amount)")
+                        .font(.title)
+                        .fontWeight(.bold)
+                }
+                Spacer()
+            }
+            .padding()
+            Spacer()
+            // Move to ChargeView
             Button(action: {
                 myCardViewModel.showChargeView()
             }) {

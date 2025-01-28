@@ -11,9 +11,5 @@ struct Card {
     let id = UUID()
     var img: String
     var name: String
-    
-    init(img: String, name: String) {
-        self.img = img
-        self.name = name
-    }
+    var amount: Int
 }
