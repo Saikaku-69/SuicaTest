@@ -8,19 +8,18 @@
 import SwiftUI
 
 struct CardsView: View {
+    let imgWidth = UIScreen.main.bounds.width
     var body: some View {
-        //Show Cards
-        ScrollView(.horizontal) {
-            HStack {
-                ForEach (0...2, id: \.self) { card in
-                    Image(systemName: "person.text.rectangle")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 200)
-                        .padding()
-                }
+        TabView {
+            ForEach (0...2, id: \.self) { card in
+                Image("SuicaDefault")
+                    .resizable()
+                    .scaledToFit()
             }
         }
+        .tabViewStyle(PageTabViewStyle())
+        .scaledToFit()
+        .frame(width: imgWidth)
     }
 }
 

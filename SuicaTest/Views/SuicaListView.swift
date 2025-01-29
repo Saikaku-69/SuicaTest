@@ -19,6 +19,7 @@ struct SuicaListView: View {
                 }) {
                     Image(systemName: "person.circle")
                         .font(.system(size: 30))
+                        .foregroundColor(.green)
                 }
                 Spacer()
                 //Add Cards
@@ -27,6 +28,7 @@ struct SuicaListView: View {
                 }) {
                     Image(systemName: "plus.circle")
                         .font(.system(size: 30))
+                        .foregroundColor(.green)
                 }
             }
             .frame(maxWidth: .infinity)
@@ -35,6 +37,7 @@ struct SuicaListView: View {
                 Text("Suica一覧"),
                 alignment: .center
             )
+            
             //Show My Cards
             CardsView()
             
@@ -57,6 +60,10 @@ struct SuicaListView: View {
                 myCardViewModel.showChargeView()
             }) {
                 Text(ChargeViewText.title)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(.green)
+                    .cornerRadius(5)
             }
             Spacer()
             
