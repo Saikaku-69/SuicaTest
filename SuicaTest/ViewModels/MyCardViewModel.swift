@@ -13,6 +13,8 @@ class MyCardViewModel: ObservableObject {
     @Published var isHomeView: Bool = false
     @Published var card: Card = Card(img: "", name: "", amount: 0)
     
+    @Published var myCards:[Card] = []
+    
     func showChargeView() {
         self.isCharge = true
         self.isHomeView = false
@@ -24,5 +26,11 @@ class MyCardViewModel: ObservableObject {
     
     func charge() {
         card.amount += ChargeAmountViewModel.shared.afterChargingAmount
+    }
+    
+    func createMycard() {
+        let newCard = Card(img: "SuicaDefault", name: "", amount: 0)
+        //最大カード枚数を超えない場合のみ追加できる
+        myCards.append(newCard)
     }
 }

@@ -12,6 +12,7 @@ struct SuicaTestApp: App {
     var body: some Scene {
         WindowGroup {
             SuicaListView()
+                .environmentObject(MyCardViewModel())
         }
     }
 }
