@@ -21,6 +21,7 @@
 		7F5A3B272D48977700259459 /* ChargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5A3B262D48977700259459 /* ChargeView.swift */; };
 		7F5A3B2B2D48AC5800259459 /* ChargeAmount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5A3B2A2D48AC5800259459 /* ChargeAmount.swift */; };
 		7F5A3B2D2D48AD0200259459 /* ChargeAmountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5A3B2C2D48AD0200259459 /* ChargeAmountViewModel.swift */; };
+		7FA0CFA22D4B7C2600D9B3D3 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0CFA12D4B7C2600D9B3D3 /* CategoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		7F5A3B262D48977700259459 /* ChargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeView.swift; sourceTree = "<group>"; };
 		7F5A3B2A2D48AC5800259459 /* ChargeAmount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeAmount.swift; sourceTree = "<group>"; };
 		7F5A3B2C2D48AD0200259459 /* ChargeAmountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeAmountViewModel.swift; sourceTree = "<group>"; };
+		7FA0CFA12D4B7C2600D9B3D3 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				7F5A3B0F2D4876B900259459 /* SuicaListView.swift */,
 				7F5A3B112D48793B00259459 /* CardsView.swift */,
 				7F5A3B222D488EC300259459 /* ViewsText.swift */,
+				7FA0CFA12D4B7C2600D9B3D3 /* CategoryView.swift */,
 				7F5A3B282D48A55700259459 /* CreateCardViews */,
 				7F5A3B292D48A5A000259459 /* ChargeViews */,
 			);
@@ -212,6 +215,7 @@
 				7F5A3B012D486E2300259459 /* SuicaTestApp.swift in Sources */,
 				7F5A3B1B2D487C0000259459 /* CreateNewCardListView.swift in Sources */,
 				7F5A3B2D2D48AD0200259459 /* ChargeAmountViewModel.swift in Sources */,
+				7FA0CFA22D4B7C2600D9B3D3 /* CategoryView.swift in Sources */,
 				7F5A3B252D4896C700259459 /* MyCardViewModel.swift in Sources */,
 				7F5A3B212D48837D00259459 /* CreateNewCardViewModel.swift in Sources */,
 				7F5A3B2B2D48AC5800259459 /* ChargeAmount.swift in Sources */,

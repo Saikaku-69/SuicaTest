@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CreateNewCardListView: View {
     @ObservedObject var viewModel: CreateNewCardViewModel
+    @EnvironmentObject var myCardViewModel: MyCardViewModel
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
@@ -27,6 +28,7 @@ struct CreateNewCardListView: View {
             }
             
             Button(action: {
+                myCardViewModel.createMycard()
                 dismiss()
             }) {
                 Text(ViewsText.btnOk)
