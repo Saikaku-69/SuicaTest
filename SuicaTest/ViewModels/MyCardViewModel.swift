@@ -29,7 +29,8 @@ class MyCardViewModel: ObservableObject {
     }
     
     func createMycard() {
+        let newCard = Card(img: "SuicaDefault", name: "", amount: 0)
         //最大カード枚数を超えない場合のみ追加できる
-        
+        myCards.append(newCard)
     }
 }

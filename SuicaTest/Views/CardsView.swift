@@ -8,18 +8,24 @@
 import SwiftUI
 
 struct CardsView: View {
-    let imgWidth = UIScreen.main.bounds.width
+    @EnvironmentObject var myCardViewModel: MyCardViewModel
+    let cardSize: CGSize
+    
+    init() {
+        let imgWidth = UIScreen.main.bounds.width
+        self.cardSize = CGSize(width: imgWidth, height: imgWidth / 1.585)
+    }
     var body: some View {
         TabView {
-            ForEach (0...2, id: \.self) { card in
+            ForEach (myCardViewModel.myCards) { card in
                 Image("SuicaDefault")
                     .resizable()
                     .scaledToFit()
+                    .padding(.horizontal)
             }
         }
         .tabViewStyle(PageTabViewStyle())
-        .scaledToFit()
-        .frame(width: imgWidth)
+        .frame(width: cardSize.width, height: cardSize.height)
     }
 }
 

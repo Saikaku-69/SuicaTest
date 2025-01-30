@@ -9,7 +9,8 @@ import SwiftUI
 
 struct SuicaListView: View {
     @StateObject private var newCardViewModel = CreateNewCardViewModel()
-    @StateObject private var myCardViewModel = MyCardViewModel()
+//    @StateObject private var myCardViewModel = MyCardViewModel()
+    @EnvironmentObject var  myCardViewModel: MyCardViewModel
     var body: some View {
         VStack {
             HStack {

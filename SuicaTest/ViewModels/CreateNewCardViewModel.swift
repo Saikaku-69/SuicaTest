@@ -20,4 +20,8 @@ class CreateNewCardViewModel: ObservableObject {
         self.isHome = true
         self.isCreate = false
     }
+    
+    func addCard() {
+        
+    }
 }
