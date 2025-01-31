@@ -18,8 +18,8 @@ struct CardView: View {
     }
     
     var body: some View {
-        TabView {
-            ForEach (cardViewModel.cards) { card in
+        TabView(selection: $cardViewModel.selectedCardIndex) {
+            ForEach (Array(cardViewModel.cards.enumerated()),id: \.element.id) { index, card in
                 VStack {
                     ZStack {
                         Image(card.img)
@@ -34,6 +34,7 @@ struct CardView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal)
                 }
+                .tag(index)
             }
         }
         .tabViewStyle(PageTabViewStyle())

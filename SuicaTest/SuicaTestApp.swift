@@ -10,7 +10,14 @@ import SwiftUI
 @main
 struct SuicaTestApp: App {
     @StateObject var cardViewModel = CardViewModel()
-    @StateObject var viewsController = ViewsController()
+    @StateObject var viewsController: ViewsController
+    
+    init() {
+        let cardVM = CardViewModel()
+        self._cardViewModel = StateObject(wrappedValue: cardVM)
+        self._viewsController = StateObject(wrappedValue: ViewsController(cardViewModel: cardVM))
+    }
+    
     var body: some Scene {
         WindowGroup {
             HomeView()

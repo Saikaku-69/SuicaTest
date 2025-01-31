@@ -10,7 +10,15 @@ import SwiftUI
 struct ChargeView: View {
     @EnvironmentObject var viewsController: ViewsController
     @EnvironmentObject var cardViewModel: CardViewModel
-    @ObservedObject var chargeViewModel: ChargeViewModel
+    @StateObject var chargeViewModel: ChargeViewModel
+    
+    let selectedCardIndex: Int
+    
+    init(selectedCardIndex: Int) {
+        self._chargeViewModel = StateObject(wrappedValue: ChargeViewModel())
+        self.selectedCardIndex = selectedCardIndex
+    }
+    
     @Environment(\.dismiss) private var dismiss
     
     let titleWidth = UIScreen.main.bounds.width
@@ -27,7 +35,7 @@ struct ChargeView: View {
                 Spacer()
             }
             .padding()
-            Image(cardViewModel.card.img)
+            Image(cardViewModel.cards[selectedCardIndex].img)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 100)
@@ -35,7 +43,7 @@ struct ChargeView: View {
             HStack {
                 VStack {
                     Text("現在の残高")
-                    Text("¥\(cardViewModel.card.balance)")
+                    Text("¥\(cardViewModel.cards[selectedCardIndex].balance)")
                         .fontWeight(.bold)
                         .font(.title)
                         .foregroundColor(.gray)
@@ -43,7 +51,7 @@ struct ChargeView: View {
                 Spacer()
                 VStack {
                     Text("チャージ後の残高")
-                    Text("¥\(cardViewModel.card.balance + chargeViewModel.amount)")
+                    Text("¥\(cardViewModel.cards[selectedCardIndex].balance + chargeViewModel.amount)")
                         .fontWeight(.bold)
                         .font(.title)
                         .foregroundColor(.black)
@@ -69,6 +77,8 @@ struct ChargeView: View {
             }
             
             Button(action: {
+                //選択したAmountをBalanceに代入する
+                cardViewModel.cards[selectedCardIndex].balance += chargeViewModel.amount
                 dismiss()
             }) {
                 Text("確定")
@@ -85,5 +95,5 @@ struct ChargeView: View {
 }
 
 #Preview {
-    ChargeView(chargeViewModel: ChargeViewModel())
+    ChargeView(selectedCardIndex: 0)
 }
