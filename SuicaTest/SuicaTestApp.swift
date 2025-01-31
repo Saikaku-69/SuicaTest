@@ -9,10 +9,13 @@ import SwiftUI
 
 @main
 struct SuicaTestApp: App {
+    @StateObject var cardViewModel = CardViewModel()
+    @StateObject var viewsController = ViewsController()
     var body: some Scene {
         WindowGroup {
-            SuicaListView()
-                .environmentObject(MyCardViewModel())
+            HomeView()
+                .environmentObject(cardViewModel)
+                .environmentObject(viewsController)
         }
     }
 }
