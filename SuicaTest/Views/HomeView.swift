@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var viewsController: ViewsController
+    @EnvironmentObject var cardViewModel: CardViewModel
     var body: some View {
         VStack {
             HStack {
@@ -47,13 +48,14 @@ struct HomeView: View {
                 Text("入金(チャージ)")
                     .chargeButtonStyle()
             }
+            .disabled(viewsController.isChargeDisabled)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .fullScreenCover(isPresented: $viewsController.isAddCardViewPresented) {
             AddCardView()
         }
         .sheet(isPresented: $viewsController.isChargeViewPresented) {
-            ChargeView(chargeViewModel: ChargeViewModel())
+            ChargeView(selectedCardIndex: cardViewModel.selectedCardIndex)
         }
     }
 }
