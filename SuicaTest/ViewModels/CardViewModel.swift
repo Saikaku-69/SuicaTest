@@ -10,6 +10,7 @@ import Foundation
 class CardViewModel: ObservableObject {
     @Published var card = CardModel(name: "MyCard", img: "SuicaDefault", balance: 0, transactions: [])
     @Published var cards: [CardModel] = []
+    @Published var selectedCardIndex: Int = 0
     
     var chargeViewModel: ChargeViewModel?
     
